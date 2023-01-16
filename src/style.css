@@ -1,0 +1,16 @@
+@import 'csshake';
+
+html, body, #app, p {
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  cursor: url("./assets/cursor/pointer.cur"), default;
+}
+
+body{
+  -webkit-user-select:none;
+  user-select:none
+}
+
