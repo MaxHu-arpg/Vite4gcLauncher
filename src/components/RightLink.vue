@@ -23,10 +23,8 @@ function installProxy(){
   </div>
   <div id="Right" class="flex flex-col content-center justify-center fixed right-0 top-0 h-screen w-20 bg-black bg-opacity-25">
     <div class="">
-      <button @click="installProxy" id="selectbtn" class="flex content-center justify-center gap-x-2
-                                    w-full h-full bg-amber-400 rounded-lg shadow-sm
-                                    hover:bg-amber-300 active:bg-yellow-500">
-        <p class="self-center font-sans text-base font-semibold tracking-wide text-yellow-900 text-center align-middle">
+      <button @click="installProxy" id="selectbtn" class="w-full h-full btn-yellow">
+        <p class="font-semibold text-yellow-900">
           安装代理
         </p>
       </button>
