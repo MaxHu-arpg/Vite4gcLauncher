@@ -138,7 +138,7 @@ async function ipVerify() {
         <p class="text-gray-100 text-center" v-if="!execpath">请选择游戏可执行文件</p>
         <p class="text-gray-100 text-center" v-else>{{ execpath }}</p>
         <div class="flex justify-around">
-          <input name="ip" maxlength="20" autocomplete= "on" placeholder="服务器IP地址" v-model="inputIPaddress"
+          <input name="ip" autocomplete= "on" placeholder="服务器IP地址" v-model="inputIPaddress"
                  class="h-10 w-44 rounded-lg text-lg outline-none px-3 focus:ring-2 focus:ring-yellow-500">
           <input name="port" maxlength="5" autocomplete= "on" placeholder="端口" v-model="inputPort"
                  class="h-10 w-20 rounded-lg text-lg outline-none px-3 focus:ring-2 focus:ring-yellow-500">
