@@ -3,7 +3,7 @@
 
 
 html {
-  cursor: url("./assets/cursor/pointer.cur"), default;
+  cursor: url("/cursor/pointer.cur"), default;
 }
 
 body{

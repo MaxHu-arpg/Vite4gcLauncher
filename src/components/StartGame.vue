@@ -1,5 +1,5 @@
 <script setup>
-import {ref, watch} from 'vue'
+import {onMounted, ref, watch} from 'vue'
 
 const inputIPaddress = ref('')
 const realIPaddress = ref('')
@@ -13,11 +13,13 @@ const severstatus = ref('-')
 const isActive = ref(false)
 const ProxyInstalled = ref(true)
 
-window.elec.getConfig().then((config) => {
-  inputIPaddress.value = config.hasOwnProperty('IP') ? config.IP : inputIPaddress.value
-  inputPort.value = config.hasOwnProperty('Port') ? config.Port : inputPort.value
-  execpath.value = config.hasOwnProperty('ExecPath') ? config.ExecPath : execpath.value
-  ProxyInstalled.value = config.hasOwnProperty('ProxyInstalled') ? config.ProxyInstalled : ProxyInstalled.value
+onMounted(()=>{
+  window.elec.getConfig().then((config) => {
+    inputIPaddress.value = config.hasOwnProperty('IP') ? config.IP : inputIPaddress.value
+    inputPort.value = config.hasOwnProperty('Port') ? config.Port : inputPort.value
+    execpath.value = config.hasOwnProperty('ExecPath') ? config.ExecPath : execpath.value
+    ProxyInstalled.value = config.hasOwnProperty('ProxyInstalled') ? config.ProxyInstalled : ProxyInstalled.value
+  })
 })
 
 
@@ -352,13 +354,13 @@ async function ipVerify() {
 }
 
 button:hover {
-  cursor: url("../assets/cursor/hand.cur"), pointer;
+  cursor: url("/cursor/hand.cur"), pointer;
 }
 
 input {
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
-  cursor: url("../assets/cursor/text.cur"), text;
+  cursor: url("/cursor/text.cur"), text;
 }
 </style>
