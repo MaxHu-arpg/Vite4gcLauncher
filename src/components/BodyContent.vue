@@ -9,7 +9,7 @@ const show = ref(true)
 </script>
 
 <template>
-  <div id="bg" class="w-screen h-screen" style="background-image: url('/bg/bg1.png');">
+  <div id="bg" class="w-screen h-screen">
     <Transition name="fade">
       <div v-show="show">
         <StartGame/>
@@ -37,6 +37,7 @@ const show = ref(true)
 
 <style scoped>
 #bg {
+  background-image: url('/bg/bg1.png');
   background-attachment: fixed;
   background-position: center top;
   background-size: cover;
